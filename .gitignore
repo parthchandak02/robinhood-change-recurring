@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Personal data: keep local
+CSV/Names.csv
+tess-screencap/*.png
+Images/OLD_SCREENSHOTS/*.png
+Images/TEMP_SCREENSHOT/
