@@ -66,7 +66,6 @@ and at the zoom level the crops were taken at.
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt     # pyautogui, opencv-python, pillow
-mkdir Images\TEMP_SCREENSHOT        # not in the repo, but the script writes here
 python main.py
 ```
 
@@ -78,8 +77,6 @@ paths at the top of `main.py`. Move the mouse into a screen corner to stop (PyAu
 - **Tied to the 2022 Robinhood web UI.** A redesign, light mode or a different zoom breaks the
   matches; the crops would need retaking.
 - **Windows paths.** Image paths use backslashes.
-- **Misleading log line.** The Frequency click prints `Unable to find image` even when it
-  clicked, because the success message concatenates a string with an int.
 - **Check the result.** It edits real recurring investments; review them in the app afterwards.
 - `tessaract-test.py` is an unfinished OCR experiment with Tesseract and isn't used.
 

@@ -38,6 +38,10 @@ backToScrollImg = "Images\PAGE_1\BACK_TO_SCROLL.png"
 tmpScreenshots = 'Images\TEMP_SCREENSHOT'
 oldScreenshots = 'Images\OLD_SCREENSHOTS'
 
+# TEMP_SCREENSHOT is git-ignored, so create it (and OLD_SCREENSHOTS) on first run
+os.makedirs(tmpScreenshots, exist_ok=True)
+os.makedirs(oldScreenshots, exist_ok=True)
+
 # Number of screenshots taken
 screenshotNum = 0
 
@@ -226,7 +230,7 @@ def clickImageMoveY(ImagePath, LeftOrRightPixels):
                                               confidence=globalConfidence)
         mod_x = x + int(LeftOrRightPixels)
         pyautogui.click(mod_x, y)
-        print("Clicked on " + LeftOrRightPixels +
+        print("Clicked on " + str(LeftOrRightPixels) +
               " PIXELS on Y Axis away from image from path: " + str(ImagePath))
     except:
         print("Unable to find image")
